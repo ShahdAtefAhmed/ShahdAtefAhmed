@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="Assigment.css">
+ 
+</head>
+<body>
+
+<form id="signup-form">
+    <label for="signup-username">Username:</label>
+    <input type="text" id="signup-username" name="signup-username" required>
+    <br>
+    <label for="signup-email">Email:</label>
+    <input type="email" id="signup-email" name="signup-email" required>
+    <br>
+    <label for="signup-age">Age:</label>
+    <input type="number" id="signup-age" name="signup-age" required min="18" max="60">
+    <br>
+    <label for="signup-gender">Gender:</label>
+    <select id="signup-gender" name="signup-gender" required>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+    </select>
+    <br>
+    <label for="signup-phone">Phone Number:</label>
+    <input type="tel" id="signup-phone" name="signup-phone" pattern="[0-9]{11}" required>
+    <br>
+    <label for="signup-password">Password:</label>
+    <input type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*]).{8,}" id="signup-password" name="signup-password" required>
+    <br>
+    <button type="submit">Sign Up</button>
+</form>
+
+<form id="login-form">
+    <label for="login-username">Username:</label>
+    <input type="text" id="login-username" name="login-username" required>
+    <br>
+    <label for="login-password">Password:</label>
+    <input type="password" id="login-password" name="login-password" required>
+    <br>
+    <button type="submit">Login</button>
+    <p>Don't Have an Account?</p>
+    <button onclick="showSignUpForm()">Sign Up</button>
+    <p>Forget Password?</p>
+    <button onclick="forgetPassword()">Forget Password</button>
+</form>
+
+<form>
+    <textarea id="username-textbox" readonly></textarea>
+    <textarea id="email-textbox" readonly></textarea>
+    <textarea id="age-textbox" readonly></textarea>
+    <textarea id="gender-textbox" readonly></textarea>
+    <textarea id="phone-textbox" readonly></textarea>
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+var users = [];
+
+document.getElementById('signup-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    var newUser = {
+        username: document.getElementById('signup-username').value,
+        email: document.getElementById('signup-email').value,
+        age: document.getElementById('signup-age').value,
+        gender: document.getElementById('signup-gender').value,
+        phone: document.getElementById('signup-phone').value,
+        password: document.getElementById('signup-password').value
+    };
+
+    if (validateUserData(newUser)) {
+        users.push(newUser);
+        alert('User created. Please proceed to the login page.');
+    }
+});
+
+document.getElementById('login-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    var loginUsername = document.getElementById('login-username').value;
+    var loginPassword = document.getElementById('login-password').value;
+
+    var matchedUser = users.find(function(user) {
+        return user.username === loginUsername && user.password === loginPassword;
+    });
+
+    var usernameTextbox = document.getElementById('username-textbox');
+    var emailTextbox = document.getElementById('email-textbox');
+    var ageTextbox = document.getElementById('age-textbox');
+    var genderTextbox = document.getElementById('gender-textbox');
+    var phoneTextbox = document.getElementById('phone-textbox');
+
+    if (matchedUser) {
+        usernameTextbox.value = 'Username: ' + matchedUser.username;
+        emailTextbox.value = 'Email: ' + matchedUser.email;
+        ageTextbox.value = 'Age: ' + matchedUser.age;
+        genderTextbox.value = 'Gender: ' + matchedUser.gender;
+        phoneTextbox.value = 'Phone: ' + matchedUser.phone;
+    } else {
+        usernameTextbox.value = '';
+        emailTextbox.value = '';
+        ageTextbox.value = '';
+        genderTextbox.value = '';
+        phoneTextbox.value = '';
+        alert('Incorrect username or password. Please try again.');
+    }
+});
+
+function validateUserData(user) {
+    if (user.age < 18 || user.age > 60) {
+        alert('Age must be between 18 and 60.');
+        return false;
+    }
+
+    if (user.phone.length !== 11) {
+        alert('Phone number must be 11 digits.');
+        return false;
+    }
+
+    return true;
+}
+
+function showSignUpForm() {
+    document.getElementById('login-form').style.display = 'none';
+    document.getElementById('signup-form').style.display = 'block';
+}
+
+function forgetPassword() {
+    var username = prompt('Enter your username:');
+    var user = users.find(function(u) {
+        return u.username === username;
+    });
+
+    if (user) {
+        var newPassword = prompt('Enter your new password:');
+        user.password = newPassword;
+        alert('Password updated successfully.');
+    } else {
+        alert('.Username not found. Please try again.');
+    }
+}
+</script>
+    
+<script src="Assigment.js"></script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(#605151, #eeeeee);
+    height: 100vh;
+}
+
+
+header {
+    background-color: #ddd;
+    padding: 11px;
+}
+
+#airforce {
+    list-style-type: none;
+    margin-left: 50%;
+}
+
+#Clothes,
+#Shoecs,#whtsec,#bags {
+    background: #3d31ac;
+    width: 50%;
+    height: 50%;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.product-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.product {
+    width: 48%;
+    margin: 10px;
+    padding: 20px;
+    background: #ececec;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#1 {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: dotted;
+}
+
+nav {
+    background: linear-gradient(#090404, #df1f1f);
+    height: 50px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+nav li {
+    margin: 0 15px;
+    background-color: #eaeaea;
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+nav a {
+    display: block;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    text-align: center;
+}
+
+nav a:hover {
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+}
+
+main {
+    margin: 20px;
+    padding: 20px;
+}
+
+footer {
+    background-color: #f0f0f0;
+    padding: 10px;
+    text-align: center;
+}
+
+#img1 {
+    border-radius: 10px;
+    width: 100;
+    max-width: 300px;
+    height: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+#img2 {
+    border-radius: 10px;
+    width: 100;
+    max-width: 300px;
+    height: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-right:200px;
+}
+
+#text {
+    font-size: 18px;
+    padding-left: 15px;
+    border-radius: 5px;
+    margin-right: 50px;
+    margin-right: 20px;
+}

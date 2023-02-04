@@ -1,0 +1,228 @@
+
+body{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background: linear-gradient(#dc5d5d,#181515);
+}
+#cart:not(:target){
+    display: none;
+}
+section:target{
+    display: block;
+}
+section:not(:target){
+    display: none;
+}
+#Bags:target{
+    display: block;
+}
+#Bags:not(:target){
+    display: none;
+}
+#Shoes:target{
+    display: block;
+}
+#Shoes:not(:target){
+    display: none;
+}
+#Watches:target{
+    display: block;
+}
+#Watches:not(:target){
+    display: none;
+}
+#window_name{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.big_boss{
+    display: flex;
+}
+.cart_title{
+    font-size: 40px;
+    font-weight: 300;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 1200px;
+    margin-left: 0px;
+    border: 2px solid gray;
+    padding: 30px;
+}
+#cancel{
+    margin-top: 70px;
+    font-size: 16px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#item1{
+    width: 120px;
+    height: 150px;
+}
+#product1{
+    display: flex;
+}
+#product2{
+    display: flex;
+    margin-top: 30px;
+}
+#item_container{
+    width:  150px;
+    height: 170px;
+    margin-left: 20px;
+    margin-right: 10px;
+    background-color: rgb(173, 170, 170);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+#dress{
+    font-size: 13px;
+    color: gray;
+}
+#detail{
+    width: fit-content;
+    float:left;
+    margin-top: -10px;
+    margin-left: 15px;
+}
+#detail p{
+    margin-top: -1px;
+    float: left;
+}
+#time{
+    margin-left: -700px;
+    margin-bottom: 50px;
+}
+table{
+    border: none;
+    margin-left: 192px;
+    margin-top: 7px;
+    margin-right: 80px;
+}
+td{
+    border: 0.3px solid black;
+    padding: 10px;
+}
+#price{
+    height: fit-content;
+}
+#price p{
+    color: rgb(55, 53, 53);
+}
+#checkOut{
+    border: 2px solid rgb(128, 78, 78);
+    padding: 10px;
+    width: 400px;
+    margin-left: 30px;
+}
+#subtotal{
+    display: flex;
+    justify-content: space-between;
+    width: fit-content;
+    margin-left: -10px;
+}
+#subtotal p{
+    margin-right: 80px;
+    margin-left: 80px;
+    font-weight: 300;
+}
+#shipping{
+    display: flex;
+    justify-content: space-between;
+    width: fit-content;
+    margin-left: -10px;
+}
+#shipping p{
+    margin-right: 80px;
+    margin-left: 80px;
+    font-weight: 300;
+}
+#total{
+    display: flex;
+    justify-content: space-between;
+    width: fit-content;
+    margin-left: -10px;
+}
+#total p{
+    margin-right: 80px;
+    margin-left: 80px;
+    font-weight: 300;
+    display: flex;
+}
+#usd{
+    font-weight: 300px;
+    color: rgb(108, 103, 103);
+}
+#checkOut input[type='text']{
+    font-size: 15px;
+    padding: 10px;
+    width: 270px;
+    border-radius: 7px;
+    border: 0.5px solid gray;
+}
+#checkOut input[type='button']{
+    background-color: black;
+    width: 294px;
+    color: white;
+    border-radius: 7px;
+    border: 0.5px solid transparent;
+    padding: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+#checkOut input[type='button']:hover{
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+.footer{
+    display: flex;
+}
+.footer div{
+    margin-right: 400px;
+    margin-left: 100px;
+}
+.element{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(8, 8, 116);
+    height: 50px;
+    
+}
+.elements{
+    margin-right: 30px;
+    color: white;
+}
+.h3{
+    align-items: center;
+    text-align: center;
+}
+hr{
+    font-size: 30px;
+    color: black;
+}
+.buy{
+    text-decoration: none;
+    color: blue;
+    background-color: rgb(147, 147, 147);
+    border: 1px solid black;
+    padding: 5px;
+    margin-top: -100px;
+    margin-left: 300px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.navigate{
+    background-color: transparent;
+    border-color: transparent;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+}
+.navigate:hover{
+    color: skyblue;
+}
